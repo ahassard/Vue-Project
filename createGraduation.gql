@@ -1,0 +1,17 @@
+mutation createGraduationGQL (
+    $gradId: Int
+  	$brandiId: Int
+    $gradDate: DateTime
+    ){
+  createGraduation (input:{
+    gradId: $gradId
+    brandiId: $brandiId
+    gradDate: $gradDate
+  }) {
+    graduation {
+    	gradId
+        brandiId
+        gradDate
+    }
+  }
+}

@@ -1,0 +1,41 @@
+mutation createExitInterviewGQL (
+    $exitId: Int
+    $optionFortyCode: String
+    $transId: Int
+    $suppliments: Boolean
+    $factors: String
+    $outsideInfluence: String
+    $basicBail: String
+    $failures: String
+    $diagnosis: String
+    $injuryTime: String
+    $failureFactors: String
+    ){
+  createExitInterview (input:{
+    exitId: $exitId
+    optionFortyCode: $optionFortyCode
+    transId: $transId
+    suppliments: $suppliments
+    factors: $factors
+    outsideInfluence: $outsideInfluence
+    basicBail: $basicBail
+    failures: $failures
+    diagnosis: $diagnosis
+    injuryTime: $injuryTime
+    failureFactors: $failureFactors
+  }) {
+    exitInterview {
+      exitId
+      optionFortyCode
+      transId
+      suppliments
+      factors
+      outsideInfluence
+      basicBail
+      failures
+      diagnosis
+      injuryTime
+      failureFactors
+    }
+  }
+}

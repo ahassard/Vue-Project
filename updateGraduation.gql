@@ -1,0 +1,17 @@
+mutation updateGraduationGQL (
+    $gradId: Int
+  	$brandiId: Int
+    $gradDate: DateTime
+    ){
+  updateGraduation (input:{
+    gradId: $gradId
+    brandiId: $brandiId
+    gradDate: $gradDate
+  }) {
+    graduation {
+    	gradId
+        brandiId
+        gradDate
+    }
+  }
+}
